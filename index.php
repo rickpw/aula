@@ -8,21 +8,21 @@ $dbpass = "";
 try
 {
     $pdo = new PDO($dsn, $dbuser, $dbpass);
-    echo "Conexao estabelecida com sucesso!";
+    echo "<h2>Conexao estabelecida com sucesso!</h2>";
     
     $sql = "SELECT * FROM posts";
     $dado = $pdo->query($sql);
     
     if($dado->rowCount() > 0){
-        echo " Há posts cadastrados";
+        echo "<h3> Há posts cadastrados</h3>";
     }
     else{
-        echo "Nao há posts cadastrados";
+        echo "<h3>Nao há posts cadastrados</h3>";
     }
 }
 catch(PDOExecption $e)
 {
-    echo "Falhou".$e->getMenssage();
+    echo "<h2>Falhou".$e->getMenssage()."</h2>";
 }
 
 
