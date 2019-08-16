@@ -18,6 +18,10 @@ try
         foreach($dado->fetchAll() as $post)
         {
             echo "<p><b>Titulo</b>: ".$post['titulo']."<br>";
+            echo "<b>Autor</b>: <i>".$post['autor']."</i>";
+            echo " - <b>Dta de criaçao</b>: ".$post['data_criado']."</p>";
+            echo "<p><b>Conteudo: </b><br>".$post['conteudo']."</p><br>";
+            echo "<hr>";
         }
     }
     else{
