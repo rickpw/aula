@@ -15,6 +15,10 @@ try
     
     if($dado->rowCount() > 0){
         echo "<h3> Há posts cadastrados</h3>";
+        foreach($dado->fetchAll() as $post)
+        {
+            echo "<p><b>Titulo</b>: ".$post['titulo']."<br>";
+        }
     }
     else{
         echo "<h3>Nao há posts cadastrados</h3>";
